@@ -19,13 +19,11 @@ Virtual Boxes (Servers)
 
 There are some boxes available:
 
-Vagrant Box Name:        elastic_0_90_13
-Elasticsearch Version:   0.90.13
-Ip Address when started: 192.168.33.109
+| Vagrant Box Name | Elasticsearch Version | Ip Address when started |
+| ---------------- | :-------------------: | ----------------------: |
+| elastic_0_90_13 | 0.90.13 | 192.168.33.109 |
+| elastic_1_3_2 | 1.3.2 | 192.168.33.132 |
 
-Vagrant Box Name:        elastic_1_3_2
-Elasticsearch Version:   1.3.2
-Ip Address when started: 192.168.33.132
 
 ---
 
