@@ -1,0 +1,13 @@
+- name: Install openjdk 7
+  apt: pkg=openjdk-7-jre-headless state=present cache_valid_time=3600
+
+- name: Download elasticsearch
+  get_url: url=https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-{{ elasticsearch_version }}.deb dest=/tmp
+
+- name: Install elasticsearch
+  shell: dpkg -i /tmp/elasticsearch-{{ elasticsearch_version }}.deb creates=/etc/default/elasticsearch
+
+- name: Make ES start at boot
+  shell: update-rc.d elasticsearch defaults 95 10
+  notify:
+    - restart elasticsearch

@@ -1,0 +1,18 @@
+---
+- hosts: elastic_0_90_13
+  user: vagrant
+  sudo: True
+  vars:
+    elasticsearch_version: "0.90.13"
+  roles:
+  - common
+  - elasticsearch
+
+- hosts: elastic_1_3_2
+  user: vagrant
+  sudo: True
+  vars:
+    elasticsearch_version: "1.3.2"
+  roles:
+  - common
+  - elasticsearch
