@@ -32,5 +32,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           v.name = "elastic_1_3_2"
       end
   end
+
+  config.vm.define :elastic_1_4_1 do |cfg|
+      cfg.vm.network :private_network, ip: "192.168.33.141"
+      cfg.vm.provider :virtualbox do |v|
+          v.name = "elastic_1_4_1"
+      end
+  end
   
 end

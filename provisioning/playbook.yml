@@ -16,3 +16,12 @@
   roles:
   - common
   - elasticsearch
+
+- hosts: elastic_1_4_1
+  user: vagrant
+  sudo: True
+  vars:
+    elasticsearch_version: "1.4.1"
+  roles:
+  - common
+  - elasticsearch
