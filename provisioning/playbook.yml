@@ -25,3 +25,21 @@
   roles:
   - common
   - elasticsearch
+
+- hosts: elastic_1_4_4
+  user: vagrant
+  sudo: True
+  vars:
+    elasticsearch_version: "1.4.4"
+  roles:
+  - common
+  - elasticsearch
+
+- hosts: elastic_1_5_2
+  user: vagrant
+  sudo: True
+  vars:
+    elasticsearch_version: "1.5.2"
+  roles:
+  - common
+  - elasticsearch
